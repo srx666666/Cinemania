@@ -1,0 +1,91 @@
+<html>
+<title>Cinemania</title>
+  <head>
+	<link rel="stylesheet" type="text/css" href="p1.css">
+  </head>
+  <body>
+     <script>
+ function otvori(){
+ window.open("termin.html");
+}
+     </script>
+    <div class="demo-layout-transparent mdl-layout ">
+	<div class="mdl-layout  mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+     
+	 
+        <div class="mdl-layout__header-row">
+		<a href="Pregled.html">
+		  <img class="logo" src="logo.png">
+		  </a>
+          <span class="mdl-layout-title"><font size='5'>&nbspDodavanje novog filma</font></span>
+           <div class="mdl-layout-spacer">
+		  
+		  </div>
+		 
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="prijava.html" >LogOut</a>
+           
+          </nav>
+        </div>
+      </header>
+	 
+<table height=100%, width=100%>
+<tr >
+              <td bgcolor="white" valign='top' width='200px'>
+
+ 
+      <div class="vertical-menu">
+  <p><font size='6'>Administrator</font></p>
+	<a class="stavka" href="NoviFilm.html" ><font size='5'>Dodavanje novih filmova</font></a>
+		
+         <a  class="stavka" href="BrisanjeIzmena.html" ><font 	size='5'>Izmena filma</font></a>
+      
+   	
+         <a  class="stavka" href="Vip.html"><font size='5'>Promovisanje clanova u VIP clanove</font></a>
+      
+   
+
+</div>
+           
+     
+	  </td>
+	  <td>
+      <main class="mdl-layout__content">
+	 <table width='60%' align='center'> 
+	<form>
+ <fieldset>
+   <legend> Dodavanje novog filma </legend>
+	<br><b>Ime filma</b>: <input type="text" name="ime" required><br><br>
+	<b>Opis filma</b>: <input type="text" name"opis" required><br><br>
+	<b>Fotografija filma</b>: <input type="file" name="slika" required><br><br>
+	<b>Trailer filma</b>: <input type="file" name="trailer" required><br><br>
+	<b>Datum prikazivanja</b>: <input type="date" name="datum" required><br><br>
+	<b>Duzina trajanja filma</b>: <input type="number" name="trajanje" required> <br><br>	
+	<b>Termini </b>:&nbsp<button onclick="otvori()">Dodaj termine</button><br><br>
+	<b>Zanrovi</b>:<input type="checkbox" name="zanr">Avantura
+	<input type="checkbox" name="zanr">Animirani
+	<input type="checkbox" name="zanr">Akcija
+	<input type="checkbox" name="zanr">Biografski
+	<input type="checkbox" name="zanr">Vestern
+	<input type="checkbox" name="zanr">Dokumentarac
+	<input type="checkbox" name="zanr">Drama
+	<input type="checkbox" name="zanr">Istorijski
+	<input type="checkbox" name="zanr">Komedija
+	<input type="checkbox" name="zanr">Kriminalisticki
+	<input type="checkbox" name="zanr">Ljubavni
+	<input type="checkbox" name="zanr">Misterija
+	<input type="checkbox" name="zanr">Mjuzikl
+	<input type="checkbox" name="zanr">Naucno-fantasticni
+	<input type="checkbox" name="zanr">Ratni
+	<input type="checkbox" name="zanr">Triler
+	<input type="checkbox" name="zanr">Fantastika
+	<input type="checkbox" name="zanr">Horor<br><br>
+	<b>Glumci</b>:<input type="text" name="glumci" required><br><br>
+	<b>Reziseri</b>:<input type="text" name="reziseri" required><br><br>
+	<pre class="tab">                                                                            <input type="submit"></pre>
+ </fieldset>
+</form>
+  </body>
+</html>
