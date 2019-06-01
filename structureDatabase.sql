@@ -88,14 +88,14 @@ CREATE TABLE Sala
 
 
 ALTER TABLE Administrator
-	ADD CONSTRAINT R_11 FOREIGN KEY (KorisnickoIme) REFERENCES RegistrovanKorisnik(KorisnickoIme)
+	ADD CONSTRAINT R_12 FOREIGN KEY (KorisnickoIme) REFERENCES RegistrovanKorisnik(KorisnickoIme)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 ;
 
 
 ALTER TABLE Karta
-	ADD CONSTRAINT R_10 FOREIGN KEY (IDProjekcije) REFERENCES Projekcije(IDProjekcije)
+	ADD CONSTRAINT R_10 FOREIGN KEY (IDProjekcije) REFERENCES Projekcija(IDProjekcije)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 ;
