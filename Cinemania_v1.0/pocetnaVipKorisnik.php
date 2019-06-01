@@ -1,0 +1,87 @@
+<html>
+<title>Cinemania</title>
+  <head>
+	<link rel="stylesheet" type="text/css" href="p1.css">
+  </head>
+  <body>
+<script>
+ function promovisi(){
+ confirm("Da li ste sigurni da zelite da promovisete ovog clana u VIP clana?");
+}
+ function odbijeno(){
+ confirm("Da li ste sigurni da zelite da odbijete ovaj zahtev?");
+}
+</script>
+    <div class="demo-layout-transparent mdl-layout ">
+	<div class="mdl-layout  mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+     
+	 
+        <div class="mdl-layout__header-row">
+		<a href = "Pregled.html">
+		  <img class="logo" src="logo.png">
+		  </a>
+          <span class="mdl-layout-title"><font size='5'>&nbspPromovisanje registrovanih clanova u VIP clanove</font></span>
+          <div class="mdl-layout-spacer">
+		  
+		  </div><nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="prijava.html" >LogOut</a>
+           
+          </nav>
+        </div>
+      </header>
+	 
+<table height=100%, width=100%>
+<tr >
+              <td bgcolor="white" valign='top' width='200px'>
+
+ 
+      <div class="vertical-menu">
+  <p><font size='6'>Administrator</font></p>
+	<a class="stavka" href="NoviFilm.html"><font size='5'>Dodavanje novih filmova</font></a>
+		
+         <a  class="stavka" href="BrisanjeIzmena.html"><font 	size='5'>Izmena filma</font></a>
+      
+   	
+         <a  class="stavka" href="Vip.html"><font size='5'>Promovisanje clanova u VIP clanove</font></a>
+      
+   
+
+</div>
+           
+     
+	  </td>
+	  <td>
+      <main class="mdl-layout__content">
+	 <table width='60%' align='center'> 
+<form>
+	<div style="background-color:darkgray">
+ <image src="user.png" width="3%" height="6%"> 
+&nbsp&nbsp&nbsp&nbsp&nbsp
+ <button onclick="promovisi()"><font color="00cc00"> Promovisi</font> </button>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <button onclick="odbijeno()"><font color="dd0000"> Odbijeno</font> </button>
+ <p align="left">Korisnik 1</p>
+</div>
+<br><br>
+<div style="background-color:darkgray">
+ <image src="user.png" width="3%" height="6%"> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <button onclick="promovisi()"><font color="00cc00"> Promovisi</font> </button>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <button onclick="odbijeno()"><font color="dd0000"> Odbijeno</font> </button>
+ <p align="left">Korisnik 2</p>
+</div>
+<br><br>
+<div style="background-color:darkgray">
+ <image src="user.png" width="3%" height="6%"> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <button onclick="promovisi()"><font color="00cc00"> Promovisi</font> </button>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <button onclick="odbijeno()"><font color="dd0000"> Odbijeno</font> </button>
+ <p align="left">Korisnik 3</p>
+</div>
+</form>
+  </body>
+</html>
