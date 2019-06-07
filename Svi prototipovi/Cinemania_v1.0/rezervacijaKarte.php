@@ -12,8 +12,8 @@
 		foreach ($taken as $Sediste)
 		{
 				$KorisnickoIme=$_SESSION["user"]["KorisnickoIme"];
-				$IDP = $_POST['idProjekcije'];
-				$Cena=350;//$_SESSION["Cena"];
+				$IDP = $_SESSION['idProjekcije'];
+				$Cena=$_SESSION["Cena"];
 				$link=mysqli_connect("localhost", "root", "", "cinemania");
 				$sql="Insert into karta (KorisnickoIme,IDProjekcije,Cena,BrojSedista) values ('$KorisnickoIme',$IDP,$Cena,'$Sediste')";
 				$result=mysqli_query($link,$sql);
