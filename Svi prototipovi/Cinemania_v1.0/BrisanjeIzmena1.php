@@ -36,12 +36,12 @@
  
       <div class="vertical-menu">
   <p><font size='6'>Administrator</font></p>
-	<a class="stavka" href="NoviFilm.html" ><font size='5'>Dodavanje novih filmova</font></a>
+	<a class="stavka" href="NoviFilm.php" ><font size='5'>Dodavanje novih filmova</font></a>
 		
-         <a  class="stavka" href="BrisanjeIzmena.html" ><font 	size='5'>Izmena filma</font></a>
+         <a  class="stavka" href="BrisanjeIzmena1.php" ><font 	size='5'>Izmena filma</font></a>
       
    	
-         <a  class="stavka" href="Vip.html" ><font size='5'>Promovisanje clanova u VIP clanove</font></a>
+         <a  class="stavka" href="Vip.php" ><font size='5'>Promovisanje clanova u VIP clanove</font></a>
       
    
 
