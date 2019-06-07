@@ -24,5 +24,5 @@
                               VALUES('$ime','$zanr',$trajanje, '$datumPrikazivanja', '$glumci','$reziser','$opis','$img',$id,'$scenarista','$sinhronizacija',0,'$trailer') "; 
     $result=mysqli_query($link,$sql);
     echo $sql;
-//    header('Location: NoviFilm.php');
+    header('Location: NoviFilm.php');
 ?>
