@@ -30,7 +30,7 @@ and open the template in the editor.
                 <img class="logo" src="logo.png">
                 <span class="mdl-layout-title"><font size='5'>&nbspPregled repertoara bioskopa na jednom mestu!</font></span>
                 
-                <div class="mdl-layout-spacer">
+                <div class="mdl-layout-spacer" align = 'right'>
                
                 <?php if (isset($_SESSION['user'])) {?>
                     <a class="mdl-navigation__link" href="logOut.php" >Log out</a>
@@ -56,7 +56,13 @@ and open the template in the editor.
                 <?php if (isset($_SESSION['isAdmin'])) { ?>
                     <div class="vertical-menu">
                         <div class="vertical-menu">
-                                <p><font size='6'>Administrator</font></p>
+                               <p>
+                                   <font size = '5'>Administrator<br></font>
+                                    <b>Korisnicko ime:</b> <?php echo $_SESSION['user']['KorisnickoIme']; ?><br>
+                                    <b>Ime:</b> <?php echo $_SESSION['user']['Ime']; ?><br>
+                                    <b>Prezime:</b> <?php echo $_SESSION['user']['Prezime']; ?><br>
+                                    <b>Datum rodjenja:</b> <?php echo $_SESSION['user']['DatumRodjenja']; ?>
+                                </p>
                                 <a class="stavka" href="NoviFilm.php"><font size='5'>Dodavanje novih filmova</font></a>
                                 <a  class="stavka" href="BrisanjeIzmena1.php"><font size='5'>Izmena filma</font></a>
                                 <a  class="stavka" href="Vip.php"><font size='5'>Promovisanje clanova u VIP clanove</font></a>
@@ -70,7 +76,13 @@ and open the template in the editor.
                     ?>
                     <div class="vertical-menu">
                         <div class="vertical-menu">
-                            <p>VIP Korisnik</p>
+                            <p>
+                                <font size = '5'>Vip korisnik<br></font>
+                                <b>Korisnicko ime:</b> <?php echo $_SESSION['user']['KorisnickoIme']; ?><br>
+                                <b>Ime:</b> <?php echo $_SESSION['user']['Ime']; ?><br>
+                                <b>Prezime:</b> <?php echo $_SESSION['user']['Prezime']; ?><br>
+                                <b>Datum rodjenja:</b> <?php echo $_SESSION['user']['DatumRodjenja']; ?>
+                            </p>
                             <a class="stavka" href="PredlogFilma.php"><font size='5'>Preporuci&nbspmi&nbspfilm</font></a>
                             <a  class="stavka" target="_blank" onClick="window.open('PrijaviGresku.php', 'prijavigresku', 'resizable,height=600,width=800'); return false;">
                             <font size='5'>Prijavi gresku</font></a>
@@ -82,7 +94,13 @@ and open the template in the editor.
                 ?>
                         <div class="vertical-menu">
                             <div class="vertical-menu">
-                                <p>Korisnik</p>
+                                <p>
+                                    <font size = '5'>Korisnik<br></font>
+                                    <b>Korisnicko ime:</b> <?php echo $_SESSION['user']['KorisnickoIme']; ?><br>
+                                    <b>Ime:</b> <?php echo $_SESSION['user']['Ime']; ?><br>
+                                    <b>Prezime:</b> <?php echo $_SESSION['user']['Prezime']; ?><br>
+                                    <b>Datum rodjenja:</b> <?php echo $_SESSION['user']['DatumRodjenja']; ?>
+                                </p>
                                 <a class="stavka" href="PredlogFilma.php"><font size='5'>Preporuci&nbspmi&nbspfilm</font></a>
                             </div>
                         </div>
