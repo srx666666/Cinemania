@@ -1,3 +1,8 @@
+<!-- 
+    ostavljanjeKomentaraSkripta.php - Serverska stranica koja belezi novu komentar korisnika u bazu
+    @version 1.0
+    @author Mina Racic 0360/2016
+-->
 <?php
 
     session_start();
@@ -23,15 +28,6 @@
     mysqli_close($connection);
     
     header('Location:pregledFilma.php')
-    
-//    $conn = new PDO("mysql:host=localhost;dbname=cinemania;charset=UTF-8", 'root');
-//    // set the PDO error mode to exception
-//    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//    $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-//    VALUES ('John', 'Doe', 'john@example.com')";
-//    // use exec() because no results are returned
-//    $conn->exec($sql);
-//    echo "New record created successfully";
 ?>
 
 

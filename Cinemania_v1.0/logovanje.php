@@ -1,3 +1,8 @@
+<!-- 
+    logovanje.php - Pocetna stranica za log in korisnika
+    @version 1.0
+    @author Mina Racic 0360/2016
+-->
 <?php
     session_start();
 ?>
@@ -10,7 +15,7 @@
     <body background = "filmTrack1.jpg" background-size="0.3">
         
         <header class="w3-container w3-red" >
-            <img src  = "logo.png" width="250" >
+            <a href = 'index.php'><img src  = "logo.png" width="250"></a>
         </header>
 
         <p align = "center">

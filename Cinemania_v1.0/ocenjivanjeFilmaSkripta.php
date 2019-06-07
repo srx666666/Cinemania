@@ -1,3 +1,8 @@
+<!-- 
+    ocenjivanjeFilmaSkripta.php - Serverska stranica koja belezi novu ocenu korisnika u bazu 
+    @version 1.0
+    @author Mina Racic 0360/2016
+-->
 <?php
     session_start();
     
