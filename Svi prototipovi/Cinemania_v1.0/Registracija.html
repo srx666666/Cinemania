@@ -1,0 +1,48 @@
+<html>
+<title>Cinemania</title>
+  <head>
+	<link rel="stylesheet" type="text/css" href="p1.css">
+	
+	
+  </head>
+  <body>
+    <div class="demo-layout-transparent mdl-layout ">
+	<div class="mdl-layout  mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+     
+	 
+        <div class="mdl-layout__header-row">
+		  <img class="logo" src="logo.png">
+          <span class="mdl-layout-title"><font size='5'>&nbspRegistracija</font></span>
+           <div class="mdl-layout-spacer">
+		  
+		  </div>
+          <!-- Navigation -->
+		 
+        </div>
+      </header>
+<table height=100%, width=100%>
+<tr >
+              
+	  <td>
+      
+	 <table width='45%' align='top'> 
+<form name="loginform" action="registracija.php" method="post">
+ <fieldset>
+  <legend> Registracija </legend>
+	<b>Korisnicko ime</b>: <input type="text" name="username" required><br>
+	<b>Ime</b>: <input type="text" name="ime" required><br>
+	<b>Prezime</b>: <input type="text" name="prezime" required><br>
+	<b>E-mail</b>: <input type="email" name="email" required><br>
+	<b>Lozinka</b>: <input type="password" name="pass" required><br>
+	<b>Pol</b>: <input type="radio" name="pol" 	value="muski"required>Muski
+    	 <input type="radio" name="pol" value="zenski"required> 	Zenski<br>
+	<b>Datum</b>: <input type="date" name="datum" required><br>
+  	<input type="submit" value="submit">
+ </fieldset>
+</form>
+</table>
+</td>
+  </body>
+</html>
