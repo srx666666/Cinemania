@@ -71,7 +71,12 @@
 		<?php
 		$link = mysqli_connect("localhost", "root", "", "cinemania");
 		$slova=array("A","B","C","D","E","F","G","H","I","J","K","L","M","N");
-		$idp=1;//$_SESSION["IDProjekcije"];
+		$idp=$_POST["idProjekcije"];
+		$_SESSION['idProjekcije']=$idp;
+		$sql="SELECT * FROM Projekcija WHERE IDProjekcije=$idp";
+		$result=mysqli_query($link,$sql);
+		$row = $result->fetch_assoc();
+		$_SESSION["Cena"]=$row["Cena"];
 		foreach ($slova as $slovo)
 		{
 			$sql="SELECT * FROM Karta WHERE IDProjekcije=$idp and BrojSedista='$broj$slovo'";
