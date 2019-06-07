@@ -39,7 +39,7 @@ die();
 	<body>
 
 	 
-<img src="slike/logo.png" width='250px'>
+<img src="logo.png" width='250px'>
 		
 	
 		        <!-- Uses a transparent header that draws on top of the layout's background -->
