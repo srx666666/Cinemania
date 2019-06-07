@@ -8,13 +8,15 @@
 			if ($key!="popust")
 				array_push($taken,$key);
 		}
-		
+		$link=mysqli_connect("localhost", "root", "", "cinemania");
+		$flag=0;
 		foreach ($taken as $Sediste)
 		{
+			$flag=1;
 				$KorisnickoIme=$_SESSION["user"]["KorisnickoIme"];
 				$IDP = $_SESSION['idProjekcije'];
 				$Cena=$_SESSION["Cena"];
-				$link=mysqli_connect("localhost", "root", "", "cinemania");
+				
 				$sql="Insert into karta (KorisnickoIme,IDProjekcije,Cena,BrojSedista) values ('$KorisnickoIme',$IDP,$Cena,'$Sediste')";
 				$result=mysqli_query($link,$sql);
 				$result= mysqli_query($link, "SELECT * FROM registrovankorisnik WHERE KorisnickoIme='$KorisnickoIme'"); 
@@ -38,7 +40,12 @@
 		}
 		else
 			$_SESSION["popust"]=false;
+		if ($flag==1)
+		{
 		 $message="Cestitamo! Rezervisali ste karte!";
+		}
+		else
+			$message="Niste rezervisali nijedno sediste!";
 		 echo "<script type='text/javascript'>alert('$message');</script>";
 				  
 		//header('Location: index.php');
