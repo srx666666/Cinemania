@@ -56,7 +56,7 @@
                         <td width='40%'>
                        
                             <form action="Rezervacija.php" method="post">
-                                <select>
+                                <select name="idProjekcije">
                                 <?php while($row = mysqli_fetch_assoc($projekcijeFilma)){?>
                                 
                                     <option value=
