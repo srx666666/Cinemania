@@ -57,8 +57,8 @@
  <legend> Izmena filma </legend>
 	<br><b>Ime filma</b>: <input type="text" name="ime" required><br><br>
 	<b>Opis filma</b>: <input type="text" name="opis" ><br><br>
-	<b>Fotografija filma</b>: <input type="file" name="slika" ><br><br>
-	<b>Trailer filma</b>: <input type="file" name="trailer" ><br><br>
+	<b>Fotografija filma</b>: <input type="text" name="slika" ><br><br>
+	<b>Trailer filma</b>: <input type="text" name="trailer" ><br><br>
 	<b>Duzina trajanja filma</b>: <input type="number" name="trajanje" > <br><br>
 	<b>Sinhronizacija</b>: <input type="text" name="sinhronizacija" > <br><br>
 	<b>Scenarista</b>: <input type="text" name="scenarista" > <br><br>
