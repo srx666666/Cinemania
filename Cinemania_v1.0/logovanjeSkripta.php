@@ -1,3 +1,8 @@
+<!-- 
+    logovanjeSkripta.php - Serverska stranica koja loguje novog korisnika
+    @version 1.0
+    @author Mina Racic 0360/2016
+-->
 <?php
         session_start();
         $username = $_POST['username'];

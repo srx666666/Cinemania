@@ -1,3 +1,8 @@
+<!-- 
+    pregledFilma.php - Pocetna strana filma koja se dinamicki ucitava u zavisnosti od zahteva korisnika 
+    @version 1.0
+    @author Mina Racic 0360/2016
+-->
 <?php
     session_start();
 
@@ -23,7 +28,7 @@
     $ocenaFilmaRezultat = mysqli_query($con, $selectOcenaFilma);
     $ocenaFilma = mysqli_fetch_assoc($ocenaFilmaRezultat);
     $projekcijeFilma = mysqli_query($con, "SELECT * FROM Projekcija WHERE IDFilma = '$idFilma'"); 
-        
+    $komentariFilma = mysqli_query($con, "SELECT * FROM Komentar WHERE IDFilma = '$idFilma'"); 
     mysqli_close($con);
 ?>
 <html>
@@ -34,11 +39,19 @@
 
     <body>
         <!--<div class="bg">-->
-            <img src="logo.png" width='20%'>
+        <a href = 'index.php'><img src="logo.png" width='20%'></a>
 
             <!--<div class="description">-->
 
                 <table width='60%' align="center"> 
+                    
+                    <tr>
+                        <td colspan = 2>                         
+                            <h2><u><font color = 'green' ><?php 
+                                echo $film['Naziv'];
+                            ?><br/></u></h2></font>
+                        </td>
+                    </tr>
                     <tr> 
                         <td width='40%'>
                        
@@ -57,12 +70,11 @@
                                 <?php } ?>
                                 </select>
                                 <input type="submit" value="Rezervisi kartu">
-                                 
-                            </form>
-                            
-                            
-                            <div class="original" style="margin-bottom: 10px;">Hodja fra Pjort </div>                                
-
+                            </form> 
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>
                             <span>Žanr:</span> <?php 
                                 echo $film['Zanr'];
                             ?><br/>
@@ -146,7 +158,7 @@
                                         <label class="drinkcard-cc star" for="star10">10</label>&nbsp
                                     
                                     </div><br>                                  
-                                    <p align = 'center'><button class = 'mdl-button' type = "submit" >Posalji ocenu</button></p>
+                                    <p align = 'center'><button class = 'mdl-button' type = "submit" <?php if(!isset($_SESSION['user'])) echo 'disabled'; ?>>Posalji ocenu</button></p>
 
                                 </form>
                             </fieldset>
@@ -156,14 +168,23 @@
             </table>					
         <hr>
         
-        <table>
-            <?php while($red = mysqli_fetch_assoc($projekcijeFilma)){ ?>
+    
+        <table width = '60%' align = 'center' >
             <tr>
-                <td><?php echo $red['KorisnickoIme'];?></td>
+                <td align = 'center'><font size='5' colspan = '2'><b>Komentari</b></font></td>
+            </tr>
+            <?php while($red = mysqli_fetch_assoc($komentariFilma)){ ?>
+            <tr>
+                <td><h6><b><?php echo $red['KorisnickoIme'];?></b><h6></td>
             </tr>
             <tr>
-                <td><?php echo $red['Opis'];?></td>
+                <td>"<?php echo $red['Opis'];?>"</td>
+
             </tr>
+            <tr>
+                <td><hr></td>
+            </tr>
+            <?php } ?>
         </table>
 
         <fieldset 
@@ -174,7 +195,7 @@
             ?> >
             <table width= '60%'  border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
                 <tr> 
-                    <td align="center" colspan='2'><font size='5'><b>Komentari</b></font></td>
+                    <td align="center" colspan='2'><font size='5'><b>Moj komentar</b></font></td>
                 </tr>
                 
                 <tr> 
@@ -187,7 +208,7 @@
                         </td> 
                 </tr>
                 <tr>
-                    <td><p align = "center"><button class = "mdl-button" type = "submit">Posalji komentar</button></p></td>
+                    <td><p align = "center"><button class = "mdl-button" type = "submit" <?php if(!isset($_SESSION['user'])) echo 'disabled'; ?>>Posalji komentar</button></p></td>
                 </tr>
                     </form>
                 

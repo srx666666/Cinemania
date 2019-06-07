@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+<!-- 
+    index.php - Pocetna strana koja se dinamicki ucitava u zavisnosti od korisnika 
+    @version 1.0
+    @author Mina Racic 0360/2016
+    @author Ksenija Jankovic 
 -->
+<!DOCTYPE html>
 <?php session_start(); ?>
 <html>
     <head>
