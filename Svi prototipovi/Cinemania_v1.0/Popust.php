@@ -10,25 +10,23 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
+        <?php 
+        
         // put your code here
          session_start();
-         if(isset($_SESSION['Popust'])){
+         if(isset($_SESSION['popust'])){
              
-         
-        if (!isset($_SESSION['user'])) {
-    
-    header("Location: http://localhost/PhpProject1/index.php");
-die();
-    
-}
+  
       $con = mysqli_connect("localhost","root","","cinemania");
         $con->set_charset('utf8');
-        $username='mnb';
+       $username=$_SESSION['user']['KorisnickoIme']; 
+       
         $vip = mysqli_query($con, "SELECT * FROM registrovankorisnik WHERE KorisnickoIme='$username'"); 
         $result=$vip->fetch_assoc();
         if($result['VIPKorisnik']!=2){ 
-             header("Location: http://localhost/PhpProject1/index.php");
+              $message=" Niste VIP Korisnik! Nastavite da gledate filmove kod nas i sakupljajte poene!";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+             header("Location:index.php");
               die();
         }
         $bodovi= mysqli_query($con, "SELECT * FROM registrovankorisnik WHERE KorisnickoIme='$username'"); 
