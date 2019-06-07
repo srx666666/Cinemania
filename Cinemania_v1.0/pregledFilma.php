@@ -24,18 +24,15 @@
     $ocenaFilma = mysqli_fetch_assoc($ocenaFilmaRezultat);
     $projekcijeFilma = mysqli_query($con, "SELECT * FROM Projekcija WHERE IDFilma = '$idFilma'"); 
         
-     mysqli_close($con);
+    mysqli_close($con);
 ?>
 <html>
     <head>
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-cyan.min.css" />
         <link rel="stylesheet" type="text/css" href="p.css">
-       <script>
-           
-        </script>
     </head>
 
-    <body onload="checkMessages()">
+    <body>
         <!--<div class="bg">-->
             <img src="logo.png" width='20%'>
 
@@ -156,10 +153,18 @@
                             
                         </td>
                     </tr>
-                </table>
-            </div>
-        </div>						
+            </table>					
         <hr>
+        
+        <table>
+            <?php while($red = mysqli_fetch_assoc($projekcijeFilma)){ ?>
+            <tr>
+                <td><?php echo $red['KorisnickoIme'];?></td>
+            </tr>
+            <tr>
+                <td><?php echo $red['Opis'];?></td>
+            </tr>
+        </table>
 
         <fieldset 
             <?php
