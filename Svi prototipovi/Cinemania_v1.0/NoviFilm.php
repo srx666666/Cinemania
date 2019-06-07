@@ -66,7 +66,7 @@ if (isset($_SESSION['isAdmin'])==false)
    <legend> Dodavanje novog filma </legend>
 	<br><b>Ime filma</b>: <input type="text" name="ime" required><br><br>
 	<b>Opis filma</b>: <input type="text" name="opis" required><br><br>
-	<b>Fotografija filma</b>: <input type="file" name="slika" required><br><br>
+	<b>Fotografija filma</b>: <input type="text" name="slika" required><br><br>
 	<b>Trailer filma</b>: <input type="text" name="trailer" required><br><br>
 	<b>Duzina trajanja filma</b>: <input type="number" name="trajanje" required> <br><br>	
         <b>Pocetni datum prikazivanja filma</b>: <input type="date" name="datumPrikazivanja" required> <br><br>
